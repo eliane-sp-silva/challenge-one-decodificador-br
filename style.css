@@ -5,37 +5,36 @@
 }
 
 body{
-  margin: 0 5px 0 5px;
   background: #e7ecfd; 
   font-family: 'Lora', sans-serif;
 }
 header{
-  width: 63.7%;
   height: 70px;
-  display: inline-block;
-  margin: 5px;
+  float: left;
+  margin-left: 2px;
+  
 }
 
 header img{
   display: inline-block;
   width: 30px;
-  margin-left: 5em;
-  margin-top: 0.5em;
-  padding-top: 5px;
+  margin-top: -15px;
+  margin-left: 15px;
 }
 main{
   display: flex;
   justify-content: center;
-  padding-bottom: 74px;
-  width: auto;
-  padding: 0;
+  flex-direction: row;
+  width: 90vw;
+  margin: 30px;
+  padding: 10px;
 }
 
 #sessao-text_area{
-  margin-left: 60px;
-  margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
   background: #e7ecfd;
 }
 
@@ -48,10 +47,10 @@ section form{
   padding: 5px;
   width: 480px;
   height: 280px;
-  display: block;
+  display: flex;
+  flex-direction: column;
   font-size: 20px;
   background: #e7ecfd;
-  margin: 60px 60px 0 180px;
   padding: 0;
   resize: none;/*tira os tracinhos do textarea*/
 }
@@ -61,6 +60,10 @@ section form{
   margin: 0;
 }
 
+#caixa-msg{
+  padding: 0;
+  margin: 0;
+}
 #caixa-msg img{
   padding-bottom: 5px;
   margin-right: 5px;
@@ -68,20 +71,15 @@ section form{
 }
 
 .msg{
-  padding: 20px 20px 0 133px;
-  left: 10px;
-  color: #356EA9;
-  margin-left: 54px;
-  font-size: 11px;
+  margin-left: 20px;
+  font-size: 12px;
 }
 
  #caixa-botoes_principais{
-  text-align: center;
-  margin-left: 130px;
-  margin-right: 20px;
-  padding: 0 15px 0 15px;
-  margin-bottom: 0;
-  padding-bottom: 0; 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center; 
 }
 
 #caixa-botoes_principais form{
@@ -89,40 +87,49 @@ section form{
 }
 
 #sessao-retorna_texto{
-  width: 350px;
-  height: 420px;
+  width: 400px;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  float: right;
+  justify-content: center;
+  align-items: center;
   border: none;
-  background: #e7ecfd;
+  margin-top: 0;
+  background: white;
   border-radius: 32px;
 }
 
 #sessao-retorna_texto:hover{
-  border: 3px solid #0A3871;
+  border: 2px solid #0A3871;
 }
 
-#sessao-retorna_texto form{
+#sessao-retorna_texto textarea{
   text-align: center;
+  width: 100%;
+  height: 100vh;
+
 }
 
-#sessao-retorna_texto #botao-copiar{
-  margin: 5px auto;
-  padding: 0 auto;
+#sessao-retorna_texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 
 }
 
 #campo-texto_criptografado{
   display: flex;
   flex-direction: column;
+  justify-content:  center;
   align-items: center;
   position: relative;
-  width: 300px;
-  height: 400px;
+  text-align: center;
+  width: 90%;
+  height: 60vh;
   border: none;
   border-radius: 32px;
-  background: #e7ecfd;
+  background: white;
   padding: 5px;
   margin: 5px 5px 0 5px;
 }
@@ -130,17 +137,15 @@ section form{
 #imagem-boneco{
   position: absolute;
   width: 70%;
-  height: 70%;
-  top: 20%;
+  height: 40vh;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #texto_criptografado{
-  width: 220px;
-  height: 220px;
   resize: none;
-  background: #e7ecfd;
+  background: white;
   border: none;
   font-size: 18px;
 }
@@ -155,7 +160,7 @@ section form{
 }
 #msg-nao_encontrada span{
   font-weight: bold;
-  font-size: 28px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 #msg-nao_encontrada p{
@@ -177,6 +182,12 @@ section form{
   background: #0A3871;
   color: white;
 }
+.invisivel{
+  display: none;
+}
+.letra_invalida{
+  color: red;
+}
 footer{
   background-color: #356EA9;
   color: #e7ecfd;
@@ -197,4 +208,13 @@ footer span{
   padding: 20px;
   margin-bottom: 0;
 
+}
+@media (max-width: 1080px) {
+  main{
+    flex-direction: column;
+    align-items: center;
+  }
+  #sessao-retorna_texto{
+    margin-top: 40px;
+  }
 }
