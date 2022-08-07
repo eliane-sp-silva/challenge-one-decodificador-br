@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[de]Codificator></title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="reset.css">
+
+</head>
+<body>
+  <header>    
+      <img src="assets/alura-Vector.svg" 
+      alt="Logo da Alura">   
+  </header>
+
+  <main>  
+    <section id="sessao-text_area">
+      <form action="">
+        <textarea type="text" id="campo-text_area" name="campo-text_area"  placeholder=" Digite seu texto" ></textarea>         
+        <span id="caixa-msg">
+          <p class="msg"><img src="assets/info-blue.svg" alt="simbolo de exclamação">Apenas letras minúsculas e sem acento.</p>
+        </span>      
+        <div id="caixa-botoes_principais">
+          <input id="botao-criptografar" class="botao" type="submit" value="Criptografar" onclick="criptografar()">
+          <input id="botao-descriptografar" class="botao" type="submit" value="Descriptografar" onclick="descriptografar()">           
+        </div>
+      </form>   
+    </section>  
+
+    <section id="sessao-retorna_texto">
+      <div id="campo-texto_criptografado">
+        <textarea id="texto_criptografado"></textarea>
+        <img id="imagem-boneco" src="assets/search-figure.svg" alt="garoto com lupa">
+        <div id="msg-nao_encontrada">
+          <span>Nenhuma mensagem encontrada</span>
+          <p>Digite um texto que você deseja criptografar ou descritografar</p>  
+        </div>
+          
+        <div id="caixa-botao_copiar" class="invisivel" action="">
+          <input id="botao-copiar" class="botao" type="submit" value="Copiar" onclick="copiaTexto()">
+        </div> 
+      </div>        
+    </section>   
+  </main>
+  <footer>
+    <span>Desenvolvido por Programa One (Oracle + Alura) & Eliane SP Silva</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
